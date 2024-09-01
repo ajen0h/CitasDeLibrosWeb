@@ -9,7 +9,7 @@ import { useCitasStore } from "./store/citas"
 import Autor from "./components/Autores/Autor"
 import Libro from "./components/Libros/Libro"
 import { CardAutores } from "./components/Autores/components/cart-autores"
-import { BookMarked, CircleUserRound, SquareLibrary } from "lucide-react"
+import { BookMarked, CircleUserRound, Github, SquareLibrary } from "lucide-react"
 import { FormCitas } from "./components/form-citas"
 import { FormAutores } from "./components/Autores/components/form-autores"
 import { FormLibros } from "./components/Libros/components/form-libros"
@@ -55,6 +55,14 @@ function App() {
       <div className="h-screen grid grid-cols-[248px_1fr]">
         <div style={{ backgroundColor: "rgba(32, 32, 32)" }} className="overflow-y-auto p-2 border-r border-white/10 ">
           <nav className="flex flex-col gap-1 text-white ">
+            <div className="flex flex-row justify-between items-center p-2">
+              
+              <h1 className="font-bold">Citas de libros</h1>
+              <Link to={"https://github.com/ajen0h/CitasDeLibrosWeb"} target="_blank">
+              <Github className="hover:text-white/40 transition-all" />
+              </Link>
+            </div>
+            <Separator />
             <FormCitas />
             <FormAutores />
             <FormLibros />
